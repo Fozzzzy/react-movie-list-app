@@ -16,13 +16,18 @@ const App = () => {
   const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=7c963a90`;
 
-    const response = await fetch(url);
-    const responseJson = await response.json();
-
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
-    } else {
-      setMovies([]);
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Network response was not ok');
+      const responseJson = await response.json();
+  
+      if (responseJson.Search) {
+        setMovies(responseJson.Search);
+      } else {
+        setMovies([]);
+      }
+    } catch (error) {
+      console.error('Failed to fetch:', error);
     }
   }
 
