@@ -7,26 +7,6 @@ import SearchBox from './components/SearchBox';
 import AddFavourites from './components/AddFavourites';
 import RemoveFavourites from './components/RemoveFavourites';
 
-// CORS
-const express = require('express');
-const cors = require('cors');
-const app = express();
-
-app.use(cors({
-  origin: 'https://react-movie-list-app-two.vercel.app/', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-  allowedHeaders: ['Content-Type', 'Authorization'] 
-}));
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-// Start the server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
-
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [favourites, setFavourites] = useState([]);
