@@ -13,11 +13,7 @@ A react web used for searching movies and managing your favorite movie list. Thi
 
 ## How to run / Installation
 
-You can access the deployed website by visiting the following URL: [react-movie-list-app](https://react-movie-list-app-two.vercel.app/)
-
-You can also install it by
-
-1. **Cloning the repository**
+1. **Clone the repository**
 
 ```bash
   git clone https://github.com/Fozzzzy/react-movie-list-app.git
