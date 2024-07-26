@@ -1,9 +1,12 @@
 body {
-  background-color: black;
+  background-color: #080414;
   color: white;
   min-height: 120vh;
 }
 
+h1 {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
 body::before {
   content: '';
   position: absolute;
@@ -15,7 +18,7 @@ body::before {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
 }
 
@@ -26,9 +29,8 @@ body::before {
 
 /* Scrollbar track */
 ::-webkit-scrollbar-track {
-  background-color: #0b0a24;
-  margin-block: 0.2em;
-  border-radius: 4px;
+  background-color: rgb(9, 6, 15);
+  border-radius: 20px;
 }
 
 /* Scrollbar thumb */

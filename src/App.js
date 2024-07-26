@@ -33,7 +33,7 @@ const App = () => {
 
   // Write to local storage everytime movie favourites is changed
   useEffect (() => {
-    const movieFavourites = JSON.parse(localStorage.getItem('movie-list-favourites'))
+    const movieFavourites = JSON.parse(localStorage.getItem('movie-list-favourites')) || [];
     setFavourites(movieFavourites);
   }, []);
 
