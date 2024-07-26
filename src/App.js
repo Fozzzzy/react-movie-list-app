@@ -21,6 +21,8 @@ const App = () => {
 
     if (responseJson.Search) {
       setMovies(responseJson.Search);
+    } else {
+      setMovies([]);
     }
   }
 
