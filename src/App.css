@@ -79,3 +79,7 @@ body::before {
   margin-right: 8px;
 }
 
+.form-control:focus {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgb(226, 19, 226) !important;
+}
